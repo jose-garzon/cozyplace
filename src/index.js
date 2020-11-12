@@ -1,17 +1,36 @@
+// ------------------------------ import libraries
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDom from 'react-dom';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// ------------------------------ import components
+import { Provider } from 'react-redux';
+import { App } from './router/App';
+import { generateStore } from './store';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// ------------------------------ import styles and images
+import { GlobalStyles } from './global-styles/GlobalStyles';
+
+// ------------------------------------ ENTRY POINT ------------------------------------//
+// This is the entry point.
+// We use hot module replacement from webpack to prevent the browser reload in development
+// The App component is wrapped in the Redux Provider to use the global store
+
+const store = generateStore();
+
+function render() {
+  ReactDom.render(
+    <Provider store={store}>
+      <GlobalStyles />
+      <App />
+    </Provider>,
+
+    document.getElementById('root'),
+  );
+}
+
+render();
+
+// This function prevent the browser reload in development
+if (module.hot) {
+  module.hot.accept('./router/App', () => render());
+}

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/cozyplace/static/js/main.fd6be49a.chunk.js",
-    "main.js.map": "/cozyplace/static/js/main.fd6be49a.chunk.js.map",
+    "main.js": "/cozyplace/static/js/main.c67b0c24.chunk.js",
+    "main.js.map": "/cozyplace/static/js/main.c67b0c24.chunk.js.map",
     "runtime-main.js": "/cozyplace/static/js/runtime-main.0927f380.js",
     "runtime-main.js.map": "/cozyplace/static/js/runtime-main.0927f380.js.map",
     "static/js/2.d51720e0.chunk.js": "/cozyplace/static/js/2.d51720e0.chunk.js",
@@ -50,6 +50,6 @@
   "entrypoints": [
     "static/js/runtime-main.0927f380.js",
     "static/js/2.d51720e0.chunk.js",
-    "static/js/main.fd6be49a.chunk.js"
+    "static/js/main.c67b0c24.chunk.js"
   ]
 }
